@@ -1,2 +1,2 @@
 # java-sdp
-Java Creational Design Pattern Practice
+Java Structural Design Pattern Practice
