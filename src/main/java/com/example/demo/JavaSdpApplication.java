@@ -6,6 +6,7 @@ import com.example.demo.adapter.phone.Iphone;
 import com.example.demo.adapter.phone.OnePlus;
 import com.example.demo.bridge.BridgeClient;
 import com.example.demo.composite.CompositeClient;
+import com.example.demo.decorator.DecoratorClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -37,5 +38,8 @@ public class JavaSdpApplication implements CommandLineRunner {
 
     log.info("********** composite **********");
     CompositeClient.run();
+
+    log.info("********** decorator **********");
+    DecoratorClient.run();
   }
 }
