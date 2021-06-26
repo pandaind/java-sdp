@@ -115,4 +115,17 @@ Java Structural Design Pattern Practice
     - Flyweight is often combined with Composite to implement shared leaf nodes.
     - Terminal symbols within Interpreter's abstract syntax tree can be shared with Flyweight.
     - Flyweight explains when and how State objects can be shared.
-- 
+- **Proxy** : Proxy, in the Java context, is defined as having the authority to represent another object. Proxy means ‘on behalf of’ or 'representing’ or ‘in place of’ are literal meanings of proxy and that directly explains Proxy Design Pattern. A proxy is a wrapper or agent object that is being called by the client to access the real serving object behind the scenes.
+  - When to use: 
+    - When creation of object is expensive or heavy weight, which means, when a deep object graph is required in the object creation process, then a high weigh proxy objects
+    - With basic required fields is created and used until the actual object is not required.
+  - Check List:
+    - Identify the leverage or "aspect" that is best implemented as a wrapper or surrogate.
+    - Define an interface that will make the proxy and the original component interchangeable.
+    - Consider defining a Factory that can encapsulate the decision of whether a proxy or original object is desirable.
+    - The wrapper class holds a pointer to the real class and implements the interface.
+    - The pointer may be initialized at construction, or on first use.
+    - Each wrapper method contributes its leverage, and delegates to the wrapper object.
+  - Rules of thumb:
+    - Adapter provides a different interface to its subject. Proxy provides the same interface. Decorator provides an enhanced interface.
+    - Decorator and Proxy have different purposes but similar structures. Both describe how to provide a level of indirection to another object, and the implementations keep a reference to the object to which they forward requests.

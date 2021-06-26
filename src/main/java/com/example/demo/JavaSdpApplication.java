@@ -9,6 +9,7 @@ import com.example.demo.composite.CompositeClient;
 import com.example.demo.decorator.DecoratorClient;
 import com.example.demo.facade.FacadeClient;
 import com.example.demo.flyweight.FlyweightClient;
+import com.example.demo.proxy.ProxyClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -49,5 +50,8 @@ public class JavaSdpApplication implements CommandLineRunner {
 
     log.info("********** flyweight **********");
     FlyweightClient.run();
+
+    log.info("********** proxy **********");
+    ProxyClient.run();
   }
 }
