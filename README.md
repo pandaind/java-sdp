@@ -86,4 +86,18 @@ Java Structural Design Pattern Practice
     - Composite could use Chain of Responsibility to let components access global properties through their parent. It could also use Decorator to override these properties on parts of the composition.
     - Decorator and Proxy have different purposes but similar structures. Both describe how to provide a level of indirection to another object, and the implementations keep a reference to the object to which they forward requests.
     - Decorator lets you change the skin of an object. Strategy lets you change the guts.
-- 
+- **Facade** : The facade design pattern creates an interface that is served as an interface to other interfaces within a system or subsystem. Facade pattern adds an interface to existing system or group of sub systems to hide its complexities. This pattern involves a single class which provides interface with simplified methods required by client and delegates calls to methods of existing system classes.
+  - When to use : When application needs a simplified interface to the overall functionality of a complex subsystem.
+  - Check List :
+    - Identify a simpler, unified interface for the subsystem or component.
+    - Design a 'wrapper' class that encapsulates the subsystem.
+    - The facade/wrapper captures the complexity and collaborations of the component, and delegates to the appropriate methods.
+    - The client uses (is coupled to) the Facade only.
+    - Consider whether additional Facades would add value.
+  - Rules of thumb :
+    - Facade defines a new interface, whereas Adapter uses an old interface. Remember that Adapter makes two existing interfaces work together as opposed to defining an entirely new one.
+    - Whereas Flyweight shows how to make lots of little objects, Facade shows how to make a single object represent an entire subsystem.
+    - Mediator is similar to Facade in that it abstracts functionality of existing classes. Mediator abstracts/centralizes arbitrary communications between colleague objects. It routinely "adds value", and it is known/referenced by the colleague objects. In contrast, Facade defines a simpler interface to a subsystem, it doesn't add new functionality, and it is not known by the subsystem classes.
+    - Abstract Factory can be used as an alternative to Facade to hide platform-specific classes.
+    - Facade objects are often Singletons because only one Facade object is required.
+    - Adapter and Facade are both wrappers; but they are different kinds of wrappers. The intent of Facade is to produce a simpler interface, and the intent of Adapter is to design to an existing interface. While Facade routinely wraps multiple objects and Adapter wraps a single object; Facade could front-end a single complex object and Adapter could wrap several legacy objects.
