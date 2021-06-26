@@ -101,3 +101,18 @@ Java Structural Design Pattern Practice
     - Abstract Factory can be used as an alternative to Facade to hide platform-specific classes.
     - Facade objects are often Singletons because only one Facade object is required.
     - Adapter and Facade are both wrappers; but they are different kinds of wrappers. The intent of Facade is to produce a simpler interface, and the intent of Adapter is to design to an existing interface. While Facade routinely wraps multiple objects and Adapter wraps a single object; Facade could front-end a single complex object and Adapter could wrap several legacy objects.
+- **Fly Weight** : Flyweight pattern tries to reuse already existing similar kind objects by storing them and creates new object when no matching object is found. Flyweight pattern is used to reduce the number of objects created and to decrease memory footprint and increase performance.
+  - When to use: Flyweight pattern is used when we need to create a large number of similar objects (which are immutable). This reduces memory foot print and keeps app away  from java.lang.OutOfMemoryError.
+  - Check List:
+    - Ensure that object overhead is an issue needing attention, and, the client of the class is able and willing to absorb responsibility realignment.
+    - Divide the target class's state into: shareable (intrinsic) state, and non-shareable (extrinsic) state.
+    - Remove the non-shareable state from the class attributes, and add it the calling argument list of affected methods.
+    - Create a Factory that can cache and reuse existing class instances.
+    - The client must use the Factory instead of the new operator to request objects.
+    - The client (or a third party) must look-up or compute the non-shareable state, and supply that state to class methods.
+  - Rules of thumb:
+    - Whereas Flyweight shows how to make lots of little objects, Facade shows how to make a single object represent an entire subsystem.
+    - Flyweight is often combined with Composite to implement shared leaf nodes.
+    - Terminal symbols within Interpreter's abstract syntax tree can be shared with Flyweight.
+    - Flyweight explains when and how State objects can be shared.
+- 
