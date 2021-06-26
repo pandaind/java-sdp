@@ -129,3 +129,11 @@ Java Structural Design Pattern Practice
   - Rules of thumb:
     - Adapter provides a different interface to its subject. Proxy provides the same interface. Decorator provides an enhanced interface.
     - Decorator and Proxy have different purposes but similar structures. Both describe how to provide a level of indirection to another object, and the implementations keep a reference to the object to which they forward requests.
+
+
+
+Reference :
+
+- ​	https://sourcemaking.com/design_patterns
+- ​	https://refactoring.guru/design-patterns 
+
