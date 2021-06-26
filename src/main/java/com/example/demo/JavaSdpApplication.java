@@ -4,6 +4,7 @@ import com.example.demo.adapter.EarPhoneAdapter;
 import com.example.demo.adapter.EarPhonePlug;
 import com.example.demo.adapter.phone.Iphone;
 import com.example.demo.adapter.phone.OnePlus;
+import com.example.demo.bridge.BridgeClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -31,5 +32,6 @@ public class JavaSdpApplication implements CommandLineRunner {
     earPhonePlug.takeSoundInput(adapter.convertSoundSignal(onePlus.getSoundOutput()));
 
     log.info("********** bridge **********");
+    BridgeClient.run();
   }
 }
