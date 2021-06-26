@@ -5,6 +5,7 @@ import com.example.demo.adapter.EarPhonePlug;
 import com.example.demo.adapter.phone.Iphone;
 import com.example.demo.adapter.phone.OnePlus;
 import com.example.demo.bridge.BridgeClient;
+import com.example.demo.composite.CompositeClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -33,5 +34,8 @@ public class JavaSdpApplication implements CommandLineRunner {
 
     log.info("********** bridge **********");
     BridgeClient.run();
+
+    log.info("********** composite **********");
+    CompositeClient.run();
   }
 }
